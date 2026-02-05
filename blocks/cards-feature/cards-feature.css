@@ -63,6 +63,7 @@
 }
 
 /* Title styling - maroon color, bold */
+
 /* Override global button styles for links in cards */
 .cards-feature .cards-feature-card-body p strong,
 .cards-feature .cards-feature-card-body p strong a,
@@ -72,6 +73,7 @@
   color: var(--color-primary);
   text-decoration: none;
   display: block;
+
   /* Reset button styles */
   background-color: transparent;
   border: none;

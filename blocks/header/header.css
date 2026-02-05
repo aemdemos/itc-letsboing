@@ -127,59 +127,12 @@ header nav .nav-brand img {
   width: auto;
 }
 
-/* Hide nav sections on mobile - they go in drawer */
-header nav .nav-sections {
-  display: none;
-}
-
-/* Login button */
-header nav .nav-tools {
-  display: flex;
-  align-items: center;
-  z-index: 2;
-}
-
-header nav .nav-tools a,
-header nav .nav-tools a:any-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--body-font-size-xs);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
-  background-color: transparent;
-  border: 1px solid var(--color-primary);
-  border-radius: 16px;
-  padding: 8px 12px;
-  text-decoration: none;
-  transition: all var(--transition-base);
-  min-width: 60px;
-}
-
-header nav .nav-tools a:hover {
-  background-color: var(--color-primary);
-  color: var(--text-color-light);
-}
-
-/* Smaller login button on very small screens */
-@media (width < 360px) {
-  header nav .nav-tools a,
-  header nav .nav-tools a:any-link {
-    padding: 6px 10px;
-    font-size: 11px;
-    min-width: auto;
-  }
-}
-
 /* Nav drawer overlay */
 header nav .nav-sections-overlay {
   display: none;
   position: fixed;
-  top: var(--nav-height);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: var(--nav-height) 0 0;
+  background-color: rgb(0 0 0 / 50%);
   z-index: 98;
 }
 
@@ -262,4 +215,45 @@ header nav .nav-sections ul > li > a img,
 header nav .nav-sections ul > li > a .icon {
   width: 18px;
   height: 18px;
+}
+
+/* Login button */
+header nav .nav-tools {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+/* stylelint-disable no-descending-specificity */
+header nav .nav-tools a,
+header nav .nav-tools a:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--body-font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  min-width: 60px;
+}
+
+header nav .nav-tools a:hover {
+  background-color: var(--color-primary);
+  color: var(--text-color-light);
+}
+/* stylelint-enable no-descending-specificity */
+
+/* Smaller login button on very small screens */
+@media (width < 360px) {
+  header nav .nav-tools a,
+  header nav .nav-tools a:any-link {
+    padding: 6px 10px;
+    font-size: 11px;
+    min-width: auto;
+  }
 }
