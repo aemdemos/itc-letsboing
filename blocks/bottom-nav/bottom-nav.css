@@ -1,0 +1,103 @@
+/*
+ * Bottom Navigation Block - LetsBoing
+ * Fixed bottom tab navigation bar
+ * 5 tabs: Home, Samachar, Play Game, Bolte Sitare, Profile
+ */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 540px;
+  height: 70px;
+  background-color: var(--color-primary);
+  border-radius: 16px 16px 0 0;
+  padding: var(--spacing-s);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* On mobile, full width */
+@media (width < 600px) {
+  .bottom-nav {
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+
+.bottom-nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.bottom-nav > ul > li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-nav > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--text-color-light);
+  text-decoration: none;
+  padding: var(--spacing-xs);
+  transition: opacity var(--transition-fast);
+}
+
+.bottom-nav > ul > li > a:hover {
+  opacity: 0.8;
+}
+
+/* Nav icon */
+.bottom-nav > ul > li > a > picture,
+.bottom-nav > ul > li > a > img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Make icons white */
+}
+
+.bottom-nav > ul > li > a > picture > img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Make icons white */
+}
+
+/* Nav text */
+.bottom-nav > ul > li > a > span,
+.bottom-nav > ul > li > a > div {
+  font-size: var(--body-font-size-xs);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-color-light);
+  white-space: nowrap;
+}
+
+/* Active state */
+.bottom-nav > ul > li.active > a,
+.bottom-nav > ul > li > a[aria-current="page"] {
+  opacity: 1;
+}
+
+.bottom-nav > ul > li.active > a > span,
+.bottom-nav > ul > li > a[aria-current="page"] > span {
+  font-weight: var(--font-weight-medium);
+}
+
+/* Add bottom padding to main content to account for fixed nav */
+body:has(.bottom-nav) main {
+  padding-bottom: 80px;
+}

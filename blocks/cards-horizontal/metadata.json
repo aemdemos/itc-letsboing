@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-horizontal",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-02-04T18:28:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://letsboing.com/tedhe-medhe-samachaar.html",
+    "originPage": "Tedhe Medhe Samachaar page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "category-navigation",
+    "imagePattern": "square"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + button",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "category listing pages",
+      "feature navigation",
+      "content section links"
+    ],
+    "notSuitableFor": [
+      "blog article listings",
+      "team member cards",
+      "product grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/tedhe-medhe-samachaar", "/content/bolte-sitare"],
+    "reuseCount": 2,
+    "lastUsed": "2026-02-05T01:08:00.000Z"
+  }
+}

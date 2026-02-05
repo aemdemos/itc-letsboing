@@ -1,0 +1,8 @@
+/*
+ * Metadata Block
+ * Hidden block that stores page metadata
+ */
+
+.metadata {
+  display: none;
+}

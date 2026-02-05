@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-zodiac",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-02-05T01:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://letsboing.com/bolte-sitare/bhavishya-on-the-go.html",
+    "originPage": "Bhavishya on the Go zodiac selection page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "zodiac-selection",
+    "imagePattern": "portrait"
+  },
+  "contentPattern": {
+    "structure": "image + heading + text (overlaid)",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "zodiac sign selection pages",
+      "category grids with portrait images",
+      "clickable card grids"
+    ],
+    "notSuitableFor": [
+      "blog article listings",
+      "feature cards with descriptions",
+      "horizontal card layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/bolte-sitare/bhavishya-on-the-go"],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-05T01:30:00.000Z"
+  }
+}

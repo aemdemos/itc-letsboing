@@ -2,7 +2,8 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
-const isDesktop = window.matchMedia('(min-width: 900px)');
+// Using 600px to match CSS breakpoints for mobile-first design
+const isDesktop = window.matchMedia('(min-width: 600px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -160,9 +161,8 @@ export default async function decorate(block) {
   hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
-  // prevent mobile nav behavior on window resize
-  toggleMenu(nav, navSections, isDesktop.matches);
-  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+  // For mobile-first design, always keep drawer closed by default
+  // Don't auto-expand on any screen size
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';

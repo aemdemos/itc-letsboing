@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-02-04T10:20:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://letsboing.com/",
+    "originPage": "LetsBoing home page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "vibrant",
+    "density": "spacious",
+    "purpose": "hero-promo",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + optional CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "home page hero banners",
+      "promotional carousels",
+      "landing page heroes"
+    ],
+    "notSuitableFor": [
+      "product galleries",
+      "testimonial sliders",
+      "image-only carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-04T10:20:00.000Z"
+  }
+}

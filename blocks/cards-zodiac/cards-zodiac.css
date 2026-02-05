@@ -1,0 +1,56 @@
+.cards-zodiac > ul {
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-m);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.cards-zodiac > ul > li {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards-zodiac > ul > li a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cards-zodiac .cards-zodiac-card-image {
+  line-height: 0;
+}
+
+.cards-zodiac .cards-zodiac-card-image picture,
+.cards-zodiac .cards-zodiac-card-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cards-zodiac .cards-zodiac-card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cards-zodiac .cards-zodiac-card-body p {
+  margin: 0;
+}
+
+.cards-zodiac .cards-zodiac-card-body p:first-child {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+}
+
+.cards-zodiac .cards-zodiac-card-body p:last-child {
+  font-size: 10px;
+  opacity: 0.9;
+}

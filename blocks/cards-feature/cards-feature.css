@@ -1,0 +1,106 @@
+/*
+ * Cards Feature Block - LetsBoing
+ * Mobile-first single column layout with full-width images
+ * Matches original site design: stacked cards with centered text
+ */
+
+.cards-feature {
+  padding: 0 var(--spacing-m);
+}
+
+.cards-feature > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cards-feature > ul > li {
+  background-color: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  padding: 0;
+}
+
+.cards-feature > ul > li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cards-feature .cards-feature-card-image {
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+
+.cards-feature > ul > li img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.cards-feature .cards-feature-card-body {
+  padding: 0;
+  text-align: center;
+  margin-bottom: var(--spacing-l);
+}
+
+.cards-feature .cards-feature-card-body p {
+  margin: 0;
+}
+
+.cards-feature .cards-feature-card-body p:first-child {
+  margin-bottom: 4px;
+}
+
+/* Title styling - maroon color, bold */
+/* Override global button styles for links in cards */
+.cards-feature .cards-feature-card-body p strong,
+.cards-feature .cards-feature-card-body p strong a,
+.cards-feature .cards-feature-card-body p strong a:any-link {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+  /* Reset button styles */
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  min-width: auto;
+  box-shadow: none;
+}
+
+.cards-feature .cards-feature-card-body p strong a:hover {
+  color: var(--color-primary-dark);
+  background-color: transparent;
+  transform: none;
+}
+
+/* Description styling */
+.cards-feature .cards-feature-card-body p:last-child:not(:first-child) {
+  color: var(--text-color-body);
+  font-size: var(--body-font-size-m);
+  line-height: 1.4;
+}
+
+/* Remove any hover effects - keep it simple like original */
+.cards-feature > ul > li:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.cards-feature > ul > li:hover img {
+  transform: none;
+}

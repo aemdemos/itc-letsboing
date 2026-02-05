@@ -1,0 +1,99 @@
+/*
+ * Cards Blog Block - LetsBoing
+ * Blog article cards for the "More Boings" section
+ * Horizontal scroll with yellow/golden cards
+ */
+
+.cards-blog {
+  padding: 0 var(--spacing-m);
+}
+
+.cards-blog > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--spacing-m);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.cards-blog > ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.cards-blog > ul > li {
+  flex: 0 0 224px;
+  min-width: 224px;
+  background-color: var(--color-secondary);
+  border-radius: 26px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.cards-blog > ul > li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.cards-blog .cards-blog-card-image {
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-blog > ul > li img {
+  width: 100%;
+  aspect-ratio: 224 / 150;
+  object-fit: cover;
+  border-radius: 26px 26px 0 0;
+}
+
+.cards-blog .cards-blog-card-body {
+  padding: var(--spacing-m) var(--spacing-m) 26px;
+}
+
+/* Date styling */
+.cards-blog .cards-blog-card-body p:first-child {
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color-body);
+  margin: 0 0 var(--spacing-s);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Title styling - reset any button/link styles */
+.cards-blog .cards-blog-card-body p:last-child,
+.cards-blog .cards-blog-card-body p:last-child strong,
+.cards-blog .cards-blog-card-body p:last-child strong a,
+.cards-blog .cards-blog-card-body p:last-child strong a:any-link {
+  font-size: var(--body-font-size-m);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4;
+  color: var(--text-color-body);
+  margin: 0;
+  /* Reset any button styles */
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* Title link hover */
+.cards-blog .cards-blog-card-body p:last-child strong a:hover {
+  color: var(--color-primary);
+  background-color: transparent;
+}
+
+/* Line clamp for title */
+.cards-blog .cards-blog-card-body p:last-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
